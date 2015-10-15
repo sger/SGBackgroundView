@@ -1,0 +1,6 @@
+framework module Pods_SGBackgroundView_Tests {
+  umbrella header "Pods-SGBackgroundView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
