@@ -1,6 +1,5 @@
 # SGBackgroundView
 
-[![CI Status](http://img.shields.io/travis/Spiros Gerokostas/SGBackgroundView.svg?style=flat)](https://travis-ci.org/Spiros Gerokostas/SGBackgroundView)
 [![Version](https://img.shields.io/cocoapods/v/SGBackgroundView.svg?style=flat)](http://cocoapods.org/pods/SGBackgroundView)
 [![License](https://img.shields.io/cocoapods/l/SGBackgroundView.svg?style=flat)](http://cocoapods.org/pods/SGBackgroundView)
 [![Platform](https://img.shields.io/cocoapods/p/SGBackgroundView.svg?style=flat)](http://cocoapods.org/pods/SGBackgroundView)
