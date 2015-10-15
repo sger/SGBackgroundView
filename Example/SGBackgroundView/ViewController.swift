@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SGBackgroundView
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let backgroundView = SGBackgroundView(frame: CGRectMake(0.0, 100.0, 300, 40.0))
+        backgroundView.bgColor = UIColor.lightGrayColor()
+        backgroundView.lineColor = UIColor.darkGrayColor()
+        backgroundView.xPosLine = 20.0
+        self.view.addSubview(backgroundView)
     }
 
     override func didReceiveMemoryWarning() {

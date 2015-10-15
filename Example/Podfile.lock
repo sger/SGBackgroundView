@@ -1,5 +1,5 @@
 PODS:
-  - SGBackgroundView (0.1.0)
+  - SGBackgroundView (1.0)
 
 DEPENDENCIES:
   - SGBackgroundView (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SGBackgroundView: eb16bca55d110521b2b79fe039fd3fedc1e2e5fe
+  SGBackgroundView: f759ed9d0587512f1ba22b54c970e6e6b07c88d4
 
 COCOAPODS: 0.39.0
