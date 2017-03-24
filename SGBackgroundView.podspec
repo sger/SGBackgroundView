@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name              = "SGBackgroundView"
-  s.version           = "1.0"
+  s.version           = "1.1"
   s.summary        = "Easily create background views in UIKit."
   s.description    = "SGBackgroundView is a simple utility for creating custom background in UITableViewCell."
   s.homepage       = "https://github.com/sger/SGBackgroundView"

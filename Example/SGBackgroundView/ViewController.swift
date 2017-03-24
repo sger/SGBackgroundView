@@ -15,9 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let backgroundView = SGBackgroundView(frame: CGRectMake(0.0, 100.0, 300, 40.0))
-        backgroundView.bgColor = UIColor.lightGrayColor()
-        backgroundView.lineColor = UIColor.darkGrayColor()
+        let backgroundView = SGBackgroundView(frame: CGRect(x: 0.0, y: 100.0, width: 300, height: 40.0))
+        backgroundView.bgColor = UIColor.lightGray
+        backgroundView.lineColor = UIColor.darkGray
         backgroundView.xPosLine = 20.0
         self.view.addSubview(backgroundView)
     }

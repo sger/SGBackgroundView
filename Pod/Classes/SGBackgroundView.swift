@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SGBackgroundView: UIView {
+open class SGBackgroundView: UIView {
     var _width:CGFloat?
     var _height:CGFloat?
     var _color:NSString?
@@ -17,7 +17,7 @@ public class SGBackgroundView: UIView {
     var _xPosLine:CGFloat?
     var _lineColor:UIColor?
     
-    public var xPosLine:CGFloat {
+    open var xPosLine:CGFloat {
         set {
             _xPosLine = newValue
             self.setNeedsDisplay()
@@ -27,7 +27,7 @@ public class SGBackgroundView: UIView {
         }
     }
     
-    public var topLine:Bool {
+    open var topLine:Bool {
         set {
             _topLine = newValue
             self.setNeedsDisplay()
@@ -37,7 +37,7 @@ public class SGBackgroundView: UIView {
         }
     }
     
-    public var width:CGFloat {
+    open var width:CGFloat {
         set {
             _width = newValue
             self.setNeedsDisplay()
@@ -47,7 +47,7 @@ public class SGBackgroundView: UIView {
         }
     }
     
-    public var height:CGFloat {
+    open var height:CGFloat {
         set {
             _height = newValue
             self.setNeedsDisplay()
@@ -57,7 +57,7 @@ public class SGBackgroundView: UIView {
         }
     }
     
-    public var color:NSString {
+    open var color:NSString {
         set {
             _color = newValue
             self.setNeedsDisplay()
@@ -67,7 +67,7 @@ public class SGBackgroundView: UIView {
         }
     }
     
-    public var lineColor:UIColor {
+    open var lineColor:UIColor {
         set {
             _lineColor = newValue
             self.setNeedsDisplay()
@@ -77,7 +77,7 @@ public class SGBackgroundView: UIView {
         }
     }
     
-    public var bgColor:UIColor {
+    open var bgColor:UIColor {
         set {
             _bgColor = newValue
             self.setNeedsDisplay()
@@ -89,43 +89,43 @@ public class SGBackgroundView: UIView {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        bgColor = UIColor.whiteColor()
+        bgColor = UIColor.white
         topLine = false
         xPosLine = 0.0
         width = frame.width
         height = frame.height
-        self.contentMode = UIViewContentMode.Redraw
+        self.contentMode = UIViewContentMode.redraw
     }
     
     required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func drawRect(rect: CGRect) {
-        let context:CGContextRef = UIGraphicsGetCurrentContext()!
-        let backgroundColor:UIColor =  UIColor.whiteColor()
+    override open func draw(_ rect: CGRect) {
+        let context:CGContext = UIGraphicsGetCurrentContext()!
+        let backgroundColor:UIColor =  UIColor.white
         backgroundColor.set()
-        CGContextFillRect(context, rect);
+        context.fill(rect);
         
-        CGContextSaveGState(context);
-        let rectangle:CGRect = CGRectMake(0.0 , 0.0, _width!, _height!);
-        CGContextAddRect(context, rectangle);
-        CGContextSetFillColorWithColor(context, _bgColor!.CGColor);
-        CGContextFillRect(context, rectangle);
-        CGContextRestoreGState(context);
+        context.saveGState();
+        let rectangle:CGRect = CGRect(x: 0.0 , y: 0.0, width: _width!, height: _height!);
+        context.addRect(rectangle);
+        context.setFillColor(_bgColor!.cgColor);
+        context.fill(rectangle);
+        context.restoreGState();
         
         if _topLine! {
-            CGContextSetLineWidth(context, 1.0);
-            CGContextSetStrokeColorWithColor(context, _lineColor!.CGColor);
-            CGContextMoveToPoint(context, 0.0, 0.0);
-            CGContextAddLineToPoint(context, _width!, 0.0);
-            CGContextStrokePath(context);
+            context.setLineWidth(1.0);
+            context.setStrokeColor(_lineColor!.cgColor);
+            context.move(to: CGPoint(x: 0.0, y: 0.0));
+            context.addLine(to: CGPoint(x: _width!, y: 0.0));
+            context.strokePath();
         }
         
-        CGContextSetLineWidth(context, 1.0);
-        CGContextSetStrokeColorWithColor(context, _lineColor!.CGColor);
-        CGContextMoveToPoint(context, _xPosLine!, floor(rectangle.origin.y + rectangle.size.height));
-        CGContextAddLineToPoint(context, _width!, floor(rectangle.origin.y + rectangle.size.height));
-        CGContextStrokePath(context);
+        context.setLineWidth(1.0);
+        context.setStrokeColor(_lineColor!.cgColor);
+        context.move(to: CGPoint(x: _xPosLine!, y: floor(rectangle.origin.y + rectangle.size.height)));
+        context.addLine(to: CGPoint(x: _width!, y: floor(rectangle.origin.y + rectangle.size.height)));
+        context.strokePath();
     }
 }
