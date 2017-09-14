@@ -329,7 +329,7 @@
 						LastSwiftMigration = 0820;
 					};
 					61DAA98A460D8667EA6F3F562C8C5136 = {
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					B1F8B29E922C112CABEF264E4FC4CC7A = {
 						LastSwiftMigration = 0820;
@@ -421,7 +421,8 @@
 				PRODUCT_NAME = SGBackgroundView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -601,7 +602,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
