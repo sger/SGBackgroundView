@@ -94,7 +94,7 @@ open class SGBackgroundView: UIView {
         xPosLine = 0.0
         width = frame.width
         height = frame.height
-        self.contentMode = UIViewContentMode.redraw
+        self.contentMode = UIView.ContentMode.redraw
     }
     
     required public init(coder aDecoder: NSCoder) {
